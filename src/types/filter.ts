@@ -3,14 +3,14 @@ interface ListVariantType {
   display_name: string;
 }
 
-interface FilterListType {
+export interface FilterListType {
   unique_id: number;
   display_name: string;
   type: 'list';
   list_variants: ListVariantType[];
 }
 
-interface FilterSliderType {
+export interface FilterSliderType {
   unique_id: number;
   display_name: string;
   type: 'slider';

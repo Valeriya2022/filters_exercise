@@ -19,6 +19,7 @@ export function useFetch(url: string) {
         setIsLoading(false);
       } catch (e) {
         setError(e);
+        setIsLoading(false);
       }
     })();
   }, [url]);
