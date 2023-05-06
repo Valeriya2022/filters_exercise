@@ -1,16 +1,6 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
-function Filters() {
-  const {data: filters} = useFetch('data/filters.json');
-  console.log(filters);
-  return (<></>)
-  ;
-}
-
-export default Filters;
-
-
-function useFetch (url) {
+export function useFetch (url:string) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState();
