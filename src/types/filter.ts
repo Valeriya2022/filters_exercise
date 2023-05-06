@@ -6,14 +6,14 @@ interface ListVariantType {
 interface FilterListType {
   unique_id: number;
   display_name: string;
-  type: "list";
-  list_variants: ListVariantType[]
+  type: 'list';
+  list_variants: ListVariantType[];
 }
 
 interface FilterSliderType {
   unique_id: number;
   display_name: string;
-  type: "slider";
+  type: 'slider';
   slider_min_value: number;
   slider_max_value: number;
   slider_value_prefix: string | null;

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Filters from "./components/filters";
+import Filters from './components/filters';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Filters />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
