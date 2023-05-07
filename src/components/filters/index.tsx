@@ -3,6 +3,7 @@ import { FilterType } from '../../types/filter';
 import { Spin, Space } from 'antd';
 import styled from 'styled-components';
 import { ListFilter } from './listFilter';
+import { SliderFilter } from './sliderFilter';
 
 const SpinnerContainer = styled.div`
   width: 100%;
@@ -25,10 +26,12 @@ export function Filters() {
   }
 
   return (
-    <Space direction='vertical'>
+    <Space direction='vertical' style={{ minWidth: 200 }}>
       {filters.map((filter) => {
         if (filter.type === 'list') {
           return <ListFilter filter={filter} key={filter.unique_id} />;
+        } else if (filter.type === 'slider') {
+          return <SliderFilter filter={filter} key={filter.unique_id} />;
         }
       })}
     </Space>
