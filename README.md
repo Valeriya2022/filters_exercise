@@ -1,4 +1,4 @@
 # Filters
 
-This project is deployed on
+This project is deployed on https://filters-exercise.vercel.app/
 
