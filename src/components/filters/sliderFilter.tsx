@@ -34,24 +34,21 @@ export function SliderFilter({ filter }: { filter: FilterSliderType }) {
       <Row>
         <Col>
           <InputNumber
-            min={filter.slider_min_value}
-            max={filter.slider_max_value}
             value={currentValue[0]}
-            onChange={(value) => setCurrentValue((prev) => [value, prev[1]])}
             addonBefore={filter.slider_value_prefix}
             addonAfter={filter.slider_value_suffix}
-            width={50}
+            type={'number'}
+            readOnly={true}
           />
         </Col>
         <Col>
           <InputNumber
-            min={filter.slider_min_value}
-            max={filter.slider_max_value}
+            min={currentValue[0]}
             value={currentValue[1]}
-            onChange={(value) => setCurrentValue((prev) => [prev[0], value])}
             addonBefore={filter.slider_value_prefix}
             addonAfter={filter.slider_value_suffix}
-            width={50}
+            type={'number'}
+            readOnly={true}
           />
         </Col>
       </Row>
